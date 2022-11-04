@@ -1,9 +1,0 @@
-Что почитать
-	Основы Git:	
-https://proglib.io/p/git-for-half-an-hour/
-	Более грубокий интерактивный курс:
-https://learngitbranching.js.org/?locale=ru_RU/
-	Что такое ветка?
-https://smartiqa.ru/courses/git/lesson-3
-
-
