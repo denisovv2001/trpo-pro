@@ -1,0 +1,16 @@
+Инструкция совместной разработке на Github:
+
+1) git clone ccылка
+2) Создаем ветку: git checkout -b TASK-1
+3) Добавляем изменение: git add .
+4) Коммитем: git commit -m "сделал 1 задачу"
+5) Загружаем в ветку изменение, если ветка создана 1 раз: 
+	git push --set-upstream origin TASK-1
+5.1) Если ветка есть git push
+6) Переходим на сайт и делаем pull recvest
+7) Переходим на ветку main:
+	git checkout main
+8) Загружаем новые изменение из реппозитории github
+	git pull
+9) Создаем новую ветку под новую задачу:
+	 git checkout -b TASK-NEW
