@@ -9,8 +9,6 @@ https://docs.google.com/document/d/1QXuiPf-LjJsX-cn1aHYKOuGZaMR9D1PTzBRbPurF94Y/
 https://github.com/denisivv2001/trpo-pro
 
 4. Хост: https://cp.hoster.ru
-        Логин: L-104170
-		Пароль: hkFjWJpb
 Ответы на частые вопросы - https://hoster.ru/faq
 наш сайт: srv181661.hoster-test.ru
 
