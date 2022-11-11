@@ -1,3 +1,12 @@
+Чтобы сохранить себе файла на комп:
+
+Открой проводник в windows. Выбери папку(C:\MAMP\htdocs) куда хочешь загрузить шаблон сайта
+В пути напиши cmd
+Пиши: "git clone https://github.com/denisovv2001/trpo-pro.git
+
+
+
+
 Ресурсы проекта по разработке приложения по обмену настольнымим играми:
 1. figma: 
 https://www.figma.com/file/jvhodNizdyCKX8yE4ekKlD/Untitled?node-id=0%3A1
