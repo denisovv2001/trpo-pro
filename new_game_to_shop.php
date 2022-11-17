@@ -7,7 +7,7 @@
 
 <main id="main" class="main">
 
-
+<div class="container">
         <div class="row g-5">
               <div class="col-md-12 col-lg-12">
                 <form class="needs-validation" novalidate="">
@@ -116,28 +116,28 @@
 
 
                     
-                      <div class="col-md-6 col-lg-6">
+                      <div class="col-md-6 col-lg-6 col-sm-12">
                        
                           <div class="row g-3">
 
-                            <img src="assets/img/game_of_trons.jpg" alt="Game" class="card-img-top">
-                            <div class="pt-2">
-                              <div class="d-flex justify-content-center">
-                                <a href="#" class="btn btn-primary btn-sm" title="Upload new game image"><i class="bi bi-upload"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm" title="Remove game image"><i class="bi bi-trash"></i></a>
+                            <img src="assets/img/game_of_trons.jpg" alt="Game" class="card-img-top" style="width: 300px">
+                           
+                              <div class="d-flex justify-content-center pt-2">
+                                <a href="#" class="btn btn-primary btn-sm mx-2" title="Upload new game image"><i class="bi bi-upload"></i></a>
+                                <a href="#" class="btn btn-danger btn-sm " title="Remove game image"><i class="bi bi-trash"></i></a>
                               </div>
-                            </div>
+                            
 
                           </div>
                         
                       </div>    
                     
-                    <div class="col-md-12 col-lg-12">
-                      <div class="row g-3">
-                        <div class="d-flex justify-content-center">
-                          <button class="w-50 btn btn-primary btn-lg" type="submit">Создать объявление</button>
-                        </div>
-                      </div> 
+                    <div class="col-lg-6  col-md-12 d-flex">
+                    
+                      
+                        <button class="w-80 btn btn-primary btn-lg container-fluid" type="submit">Создать объявление</button>
+      
+                    
                     </div>
 
 
@@ -145,5 +145,5 @@
                 </form>
               </div>
         </div>
-
+</div>
 </main
