@@ -6,7 +6,7 @@
   //   назвал переменные и настроил фильтры
 
 
-  $mysql = new mysqli ('mysql-182064.srv.hoster.ru','srv182064_pstgu','roopstgu2022t','pssrv182064_pstgu_newgu');
+  $mysql = new mysqli ('ssh-182064.srv.hoster.ru','srv182064_pstgu','pstgu2022','srv182064_pstgu_new');
   $result = $mysql->query("SELECT * FROM `personal data` WHERE `password` = '$password' AND `nickname` = '$username'");
   $user = $result->fetch_assoc(); 
   
