@@ -73,6 +73,7 @@
                         </div>
                       </div>
                       
+                      
                       <div class="col-12">
                         <label for="yourPassword" class="form-label">Пароль</label>
                         <input type="password" name="password" class="form-control" id="yourPassword" required>

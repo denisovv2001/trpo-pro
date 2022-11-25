@@ -10,6 +10,7 @@
   $result = $mysql->query("SELECT * FROM `personal data` WHERE `password` = '$password' AND `nickname` = '$username'");
   $user = $result->fetch_assoc(); 
   
+  
   if $user != $username{
     echo "введи норамльно";
   } 

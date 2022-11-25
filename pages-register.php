@@ -64,6 +64,7 @@
                   </div>
                   
                   <form action="pages-register-BD.php" method="post">
+                    
                   
                     <form class="row g-3 needs-validation" novalidate>
                       <div class="col-12">
