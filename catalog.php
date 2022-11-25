@@ -92,7 +92,7 @@ include 'header.php'; //подключение шапки
       <?php
 
       // $mysqli = new mysqli('localhost', 'root', 'root', 'pstgu'); 
-      $mysqli = new mysqli('mysql-182064.srv.hoster.ru','srv182064_pstgu','pstgu2022','srv182064_pstgu_new');с
+      $mysqli = new mysqli('mysql-182064.srv.hoster.ru','srv182064_pstgu','pstgu2022','srv182064_pstgu_new');
       $result = $mysqli->query('SELECT * FROM `game ad`'); //забираю данные из БД
 
       while ($row = $result->fetch_assoc()) // получаем все строки в цикле по одной
