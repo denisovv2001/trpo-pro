@@ -32,7 +32,7 @@
 
   //   проверки длинны
 
-  $mysql = new mysqli('mysql-182064.srv.hoster.ru','srv182064_pstgu','roopstgu2022t','pssrv182064_pstgu_newgu');
+  $mysql = new mysqli('mysql-182064.srv.hoster.ru','srv182064_pstgu','pstgu2022t','srv182064_pstgu_new');
   $mysql->query("INSERT INTO `personal data` (`login`, `password`, `nickname`, `sity`, `@mail`, `foto`) 
   VALUES('$name', '$password', '$username', '$sity', '$email', '$foto') ") ;
   $mysql->close();
