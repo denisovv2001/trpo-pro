@@ -62,36 +62,36 @@
                     <h5 class="card-title text-center pb-0 fs-4">Войди в свой аккаунт</h5>
                     <p class="text-center small">Введите никнем & пароль для входа</p>
                   </div>
-
-                  <form class="row g-3 needs-validation" novalidate>
-
-                    <div class="col-12">
-                      <label for="yourUsername" class="form-label">Никнеим</label>
-                      <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="username" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Please enter your username.</div>
+                  <form action="pages-login-BD.php" method="post">
+                    <form class="row g-3 needs-validation" novalidate>
+                      <div class="col-12">
+                        <label for="yourUsername" class="form-label">Никнеим</label>
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="inputGroupPrepend">@</span>
+                          <input type="text" name="username" class="form-control" id="yourUsername" required>
+                          <div class="invalid-feedback">Please enter your username.</div>
+                        </div>
                       </div>
-                    </div>
-
-                    <div class="col-12">
-                      <label for="yourPassword" class="form-label">Пароль</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Please enter your password!</div>
-                    </div>
-
-                    <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
-                        <label class="form-check-label" for="rememberMe">Запомни меня</label>
+                      
+                      <div class="col-12">
+                        <label for="yourPassword" class="form-label">Пароль</label>
+                        <input type="password" name="password" class="form-control" id="yourPassword" required>
+                        <div class="invalid-feedback">Please enter your password!</div>
                       </div>
-                    </div>
-                    <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit">Вход</button>
-                    </div>
-                    <div class="col-12">
-                      <p class="small mb-0">У вас нет аккаунта? <a href="pages-register.html">Создать аккаунт</a></p>
-                    </div>
+                      
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
+                          <label class="form-check-label" for="rememberMe">Запомни меня</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button class="btn btn-primary w-100" type="submit">Вход</button>
+                      </div>
+                      <div class="col-12">
+                        <p class="small mb-0">У вас нет аккаунта? <a href="pages-register.html">Создать аккаунт</a></p>
+                      </div>
+                    </form>
                   </form>
 
                 </div>
