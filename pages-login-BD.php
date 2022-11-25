@@ -11,7 +11,7 @@
   $user = $result->fetch_assoc(); 
   
   
-  if $user != $username{
+  if ($user != $username){
     echo "введи норамльно";
   } 
   // if(count($user) == null) {
