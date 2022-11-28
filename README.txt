@@ -21,15 +21,15 @@ https://github.com/denisivv2001/trpo-pro
 Ответы на частые вопросы - https://hoster.ru/faq
 наш сайт: srv181661.hoster-test.ru
 
-
-
 **Вся документация в documentanion 
-
-
-
 
 Документацию, список литературы смотрите в папке documentation/что-почитать.txt
 Основные команды при работе с Git находятся в файле documentation/git-важные-команды.txt
+
+
+Файл pages-contact.php отображает страницу технической поддержки
+В файле pages-contact-BD.php выполняется обработка запроса к таблице БД technical support
+В папке documentation находится файл pstgu.sql - база данных для работы технической поддержки её абсолютная копия - файл srv182064_pstgu_new.sql
 
 
 trpo-pro

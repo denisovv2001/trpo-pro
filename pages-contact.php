@@ -1,5 +1,5 @@
 <?php 
-  // pages-contact.php
+  // Файл pages-contact.php отображает страницу технической поддержки
   include 'header.php';
   include 'side-menu.php';
 ?>
@@ -7,8 +7,8 @@
 <body>
 
 <main id="main" class="main">
-  <!-- переход из pages-contact.php в pages-contact.bd.php с помощью метода post -->
-  <form action="pages-contact.bd.php" method="post">
+  <!-- переход из pages-contact.php в pages-contact-BD.php с помощью метода post -->
+  <form action="pages-contact-BD.php" method="post">
     <div class="container ">
       <!-- поле ввода электронной почты -->
       <div class="mb-3">
