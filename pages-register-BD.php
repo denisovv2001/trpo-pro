@@ -1,5 +1,5 @@
 <?php
-include '/forms/conect.php';
+include 'forms/conect.php';
   $name = filter_var(trim($_POST['name']),
   FILTER_SANITIZE_STRING);
   $email = filter_var(trim($_POST['email']),
@@ -39,7 +39,7 @@ include '/forms/conect.php';
   VALUES('$name', '$password', '$username', '$sity', '$email', '$foto') ") ;
   $mysql->close();
 
-
+  header('Location: /trpo-pro/pages-login.php');
 
 
 ?>
