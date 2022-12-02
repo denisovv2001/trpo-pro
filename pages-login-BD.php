@@ -6,21 +6,19 @@
   //   назвал переменные и настроил фильтры
 
 
-  $mysql = new mysqli ('mysql-182064.srv.hoster.ru','srv182064_pstgu','roopstgu2022t','pssrv182064_pstgu_newgu');
-  $result = $mysql->query("SELECT * FROM `personal data` WHERE `password` = '$password' AND `nickname` = '$username'");
+  $mysql = new mysqli ('localhost','root','root','pstgu');
+  $result = $mysql->query("SELECT * FROM `personal data` WHERE  `password` = '$password' AND `nickname` = '$username'");
   $user = $result->fetch_assoc(); 
   
+  if ($user['nickname'] == '' ){
+    header('Location: /trpo-pro/login-error.php');
+    exit();
+  }
+ 
   
-  if $user != $username{
-    echo "введи норамльно";
-  } 
-  // if(count($user) == null) {
-  //   echo "Nfrjq gjkmpjdfntm, yt yfqlty";
-  //   exit();
-  // }
-  setcookie( 'use' , $use );
-
 
 
   $mysql->close();
+
+  header('Location: /trpo-pro/catalog.php');
 ?>

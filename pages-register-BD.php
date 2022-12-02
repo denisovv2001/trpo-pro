@@ -28,14 +28,16 @@
     echo "Длина пароля не более 20 символов";
     exit();
   }
-  
+
 
   //   проверки длинны
 
-  $mysql = new mysqli('mysql-182064.srv.hoster.ru','srv182064_pstgu','roopstgu2022t','pssrv182064_pstgu_newgu');
+  $mysql = new mysqli('localhost','root','root','pstgu');
   $mysql->query("INSERT INTO `personal data` (`login`, `password`, `nickname`, `sity`, `@mail`, `foto`) 
   VALUES('$name', '$password', '$username', '$sity', '$email', '$foto') ") ;
   $mysql->close();
+
+  header('Location: /trpo-pro/pages-login.php');
 
 
 
