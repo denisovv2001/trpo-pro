@@ -10,6 +10,14 @@ include '/forms/conect.php';
   
   $result = $mysql->query("SELECT * FROM `personal data` WHERE  `password` = '$password' AND `nickname` = '$username'");
   $user = $result->fetch_assoc(); 
+
+  $_SESSION['user'] = [
+    "id" =>  $user['id'],
+    "name" => $user['login'],
+    "city" => $user['sity'],
+    "email" => $user['@mail']
+];
+
   
   if ($user['nickname'] == '' ){
     header('Location: /trpo-pro/login-error.php');

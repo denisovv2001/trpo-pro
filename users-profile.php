@@ -1,6 +1,8 @@
 <?php 
+  include 'forms/conect.php';
   include 'header.php';
   include 'side-menu.php';
+
 ?>
 
 <body>
@@ -14,8 +16,20 @@
           <div class="card">
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
-              <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-              <h2>Тимофей Холкин</h2>
+              <img src="assets/img/profile-dog.png" alt="Profile" class="rounded-circle">
+              <h2 class="my-3 "><?php echo $_SESSION['user']['name']; ?></h2>
+               
+              <form action="users-profile.php" method="POST">
+                    <input name="myActionName" class=" btn btn-dark" type="submit" value="Выйти из сайта " />
+              </form>
+               <?php
+                  if (isset($_POST['myActionName']))
+                  {
+                      
+                    unset($_SESSION['user']);
+                    header('Location: pages-login.php');
+                  }
+              ?> 
             </div>
           </div>
 
@@ -26,43 +40,40 @@
           <div class="card">
             <div class="card-body pt-3">
               <!-- Bordered Tabs -->
-              <ul class="nav nav-tabs nav-tabs-bordered">
+              <ul class="nav nav-tabs nav-tabs-bordered ">
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Общие данные</button>
-                </li>
+                </li> -->
+                <h2 class = "text-center pb-3">Общие данные</h2>
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Редактирование профиля</button>
                 </li>
 
                 <li class="nav-item">
                   <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Изменить пароль</button>
-                </li>
+                </li> -->
 
               </ul>
               <div class="tab-content pt-2">
 
                 <div class="tab-pane fade show active profile-overview" id="profile-overview">
 
-                  <div class="row">
+                  <div class="row pt-4">
                     <div class="col-lg-3 col-md-4 label ">ФИО</div>
-                    <div class="col-lg-9 col-md-8">Тимофей Холкин</div>
+                    <div class="col-lg-9 col-md-8"><?= $_SESSION['user']['name'];?></div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Город</div>
-                    <div class="col-lg-9 col-md-8">Москва</div>
+                    <div class="col-lg-9 col-md-8"><?= $_SESSION['user']['city'];?></div>
                   </div>
 
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Телефон</div>
-                    <div class="col-lg-9 col-md-8">(495) 555 55 55</div>
-                  </div>
-
+  
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Электронная почта</div>
-                    <div class="col-lg-9 col-md-8">TimHall@yandex.ru</div>
+                    <div class="col-lg-9 col-md-8"><?= $_SESSION['user']['email'];?></div>
                   </div>
 
                 </div>
@@ -70,14 +81,14 @@
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                   <!-- Profile Edit Form -->
-                  <form>
+                  <!-- <form>
                     <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Фото профиля</label>
                       <div class="col-md-8 col-lg-9">
-                        <img src="assets/img/profile-img.jpg" alt="Profile">
+                        <img src="assets/img/profile-dog.png" alt="Profile">
                         <div class="pt-2">
-                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><button type="button"class="bi bi-upload" disabled></button></a>
+                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image" ><button type="button"class="bi bi-trash" disabled></button></a>
                         </div>
                       </div>
                     </div>
@@ -120,12 +131,12 @@
                     <div class="text-center">
                       <button type="submit" class="btn btn-primary">Сохранить изменения</button>
                     </div>
-                  </form><!-- End Profile Edit Form -->
+                  </form>End Profile Edit Form -->
 
                 </div>
 
-                <div class="tab-pane fade pt-3" id="profile-change-password">
-                  <!-- Change Password Form -->
+                <!-- <div class="tab-pane fade pt-3" id="profile-change-password">
+                  
                   <form>
 
                     <div class="row mb-3">
@@ -152,7 +163,7 @@
                     <div class="text-center">
                       <button type="submit" class="btn btn-primary">Поменять пароль</button>
                     </div>
-                  </form><!-- End Change Password Form -->
+                  </form>End Change Password Form -->
 
                 </div>
 
