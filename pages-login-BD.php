@@ -1,5 +1,5 @@
 <?php
-include '/forms/conect.php';
+include 'forms/conect.php';
   $username = filter_var(trim($_POST['username']),
   FILTER_SANITIZE_STRING);
   $password = filter_var(trim($_POST['password']),
