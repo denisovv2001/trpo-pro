@@ -31,8 +31,13 @@
                             <label for="city" class="form-label">Город</label>
                             <select class="form-select" id="city" required="">
                               <option value="">Город...</option>
-                              <option>Москва</option>
-                              <option>Санкт-Петербург</option>
+                              <option>Moscow</option>
+                              <option>Saint-Petersburg</option>
+                              <option>Novosibirsk</option>
+                              <option>Ekaterinburg</option>
+                              <option>Kazan</option>
+                              <option>Chelyabinsk</option>
+                              <option>Krasnodar</option>
                             </select>
                             <div class="invalid-feedback">
                               Пожалуйста, выберите действующий город.
