@@ -27,6 +27,7 @@
                             </div>
                           </div>
 
+                          <!-- Заполняем город на выбор, в кот. находится игра при создании объявления -->
                           <div class="col-md-5">
                             <label for="city" class="form-label">Город</label>
                             <select class="form-select" id="city" required="">
