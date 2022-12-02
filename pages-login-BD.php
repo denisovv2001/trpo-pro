@@ -1,4 +1,5 @@
 <?php
+include '/forms/conect.php';
   $username = filter_var(trim($_POST['username']),
   FILTER_SANITIZE_STRING);
   $password = filter_var(trim($_POST['password']),
@@ -6,19 +7,20 @@
   //   назвал переменные и настроил фильтры
 
 
-  $mysql = new mysqli ('mysql-182064.srv.hoster.ru','srv182064_pstgu','pstgu2022','srv182064_pstgu_new');
+  
   $result = $mysql->query("SELECT * FROM `personal data` WHERE  `password` = '$password' AND `nickname` = '$username'");
   $user = $result->fetch_assoc(); 
   
   if ($user['nickname'] == '' ){
-    print_r("Такой ползователь не найден");
+    header('Location: /trpo-pro/login-error.php');
     exit();
   }
-  else {
-    print_r("Вы успешно авторизовались");
-  }
-
+ 
+  
+  
 
 
   $mysql->close();
+
+  header('Location: /trpo-pro/users-profile.php');
 ?>

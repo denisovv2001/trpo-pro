@@ -1,4 +1,5 @@
 <?php
+include '/forms/conect.php';
   $name = filter_var(trim($_POST['name']),
   FILTER_SANITIZE_STRING);
   $email = filter_var(trim($_POST['email']),
@@ -30,9 +31,10 @@
   }
   
 
+  
   //   проверки длинны
 
-  $mysql = new mysqli('mysql-182064.srv.hoster.ru','srv182064_pstgu','pstgu2022','srv182064_pstgu_new');
+
   $mysql->query("INSERT INTO `personal data` (`login`, `password`, `nickname`, `sity`, `@mail`, `foto`) 
   VALUES('$name', '$password', '$username', '$sity', '$email', '$foto') ") ;
   $mysql->close();
