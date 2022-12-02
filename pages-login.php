@@ -74,19 +74,13 @@
                       </div>
                       
                       
-                      <div class="col-12">
+                      <div class="col-12 mt-2">
                         <label for="yourPassword" class="form-label">Пароль</label>
                         <input type="password" name="password" class="form-control" id="yourPassword" required>
                         <div class="invalid-feedback">Please enter your password!</div>
                       </div>
                       
-                      <div class="col-12">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
-                          <label class="form-check-label" for="rememberMe">Запомни меня</label>
-                        </div>
-                      </div>
-                      <div class="col-12">
+                      <div class="col-12 mt-2">
                         <button class="btn btn-primary w-100" type="submit">Вход</button>
                       </div>
                       <div class="col-12">

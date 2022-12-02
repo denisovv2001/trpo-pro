@@ -1,6 +1,6 @@
 <?php 
+   include 'header.php';
   include 'forms/conect.php';
-  include 'header.php';
   include 'side-menu.php';
 
 ?>
@@ -25,7 +25,6 @@
                <?php
                   if (isset($_POST['myActionName']))
                   {
-                      
                     unset($_SESSION['user']);
                     header('Location: pages-login.php');
                   }
@@ -75,6 +74,7 @@
                     <div class="col-lg-3 col-md-4 label">Электронная почта</div>
                     <div class="col-lg-9 col-md-8"><?= $_SESSION['user']['email'];?></div>
                   </div>
+
 
                 </div>
 

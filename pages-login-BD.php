@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include 'forms/conect.php';
   $username = filter_var(trim($_POST['username']),
   FILTER_SANITIZE_STRING);
@@ -11,11 +13,12 @@ include 'forms/conect.php';
   $result = $mysql->query("SELECT * FROM `personal data` WHERE  `password` = '$password' AND `nickname` = '$username'");
   $user = $result->fetch_assoc(); 
 
+  
   $_SESSION['user'] = [
-    "id" =>  $user['id'],
     "name" => $user['login'],
     "city" => $user['sity'],
     "email" => $user['@mail']
+    
 ];
 
   
