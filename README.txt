@@ -1,10 +1,3 @@
-Чтобы сохранить себе файла на комп:
-
-Открой проводник в windows. Выбери папку(C:\MAMP\htdocs) куда хочешь загрузить шаблон сайта
-В пути напиши cmd
-Пиши: "git clone https://github.com/denisovv2001/trpo-pro.git
-
-
 
 
 Ресурсы проекта по разработке приложения по обмену настольнымим играми:
@@ -22,14 +15,82 @@ https://github.com/denisivv2001/trpo-pro
 наш сайт: srv181661.hoster-test.ru
 
 
-
-**Вся документация в documentanion 
-
-
-
-
 Документацию, список литературы смотрите в папке documentation/что-почитать.txt
 Основные команды при работе с Git находятся в файле documentation/git-важные-команды.txt
+
+
+Проект:
+PHP страницы
+	catalog.php 				- каталог
+	catalog-search-BD.php 		- каталок с заданным товаром (после поиска)
+	chosen.php 					- избранное
+	header.php
+	index.php 					- главный экран
+	my_game.php 				- мои игры
+	new_game_to_shop.php 		- создать объявление
+	pages-blank.php
+
+	pages-contact.php 			- техническая поддержка
+		выводит страницу в браузере. Позволяет указать почту и ввести текст проблемы, которые передадутся в pages-contact-BD.php
+		Доработать:
+			1. Кнопку возврата в тех. поддержку после загрузки данных в БД;
+			2. Отобразить общий список заданных вопросов по темам на сайте из БД;
+			3. Добавить кнопку со списком запросов от пользователя
+
+	pages-contact-BD.php 		- Запросы к таблице БД technical support
+		взаимодействует с БД, куда передаёт почту пользователя и текст возникшей проблемы
+		доработать:
+			1. Добавлять в БД тему вопроса;
+
+
+	pages-error-404.php
+	pages-login.php 			- вход
+	pages-login-BD.php 			- запросы к таблице БД
+	pages-register.php 			- регистрация
+	pages-register-BD.php 		- Запросы к таблице БД
+	product_card.php 			- карточка товара
+	side-menu.php
+	users-profile.php 			- профиль
+База данных
+	pstgu.sql					- база данных для локального подключения
+	srv182064_pstgu_new.sql		- база данных для удалённого подключения
+		состоит из трёх таблиц: 
+		1) game ad 			- список игр на сайте
+			поля: 
+				id_game; 
+				users_id; 
+				game name; 
+				sity; 
+				age from; 
+				age to; 
+				quality min; 
+				quality max; 
+				time; 
+				comment; 
+				present/exchange; 
+				foto.
+		2) personal data	- даннные пользователей
+			поля: 
+				users_id; 
+				login; 
+				password; 
+				nickname; 
+				sity; 
+				@mail; 
+				foto
+		3) tehnical support - техническая поддержка
+			поля: 
+				id request 	(номер запроса в БД); 
+				@mail 		(почта пользователя); 
+				comment 	(текст запроса пользователя).
+
+
+
+Чтобы сохранить себе файла на комп:
+	Открой проводник в windows. Выбери папку(C:\MAMP\htdocs) куда хочешь загрузить шаблон сайта
+	В пути напиши cmd
+	Пиши: "git clone https://github.com/denisovv2001/trpo-pro.git
+
 
 
 trpo-pro
