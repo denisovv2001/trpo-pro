@@ -33,5 +33,5 @@ include 'forms/conect.php';
 
   $mysql->close();
 
-  header('Location: /trpo-pro/users-profile.php');
+  header('Location: users-profile.php');
 ?>
