@@ -69,7 +69,7 @@
                         <div class="input-group has-validation">
                           <span class="input-group-text" id="inputGroupPrepend">@</span>
                           <input type="text" name="username" class="form-control" id="yourUsername" required>
-                          <div class="invalid-feedback">Please enter your username.</div>
+                          <div class="invalid-feedback">Пожалуйста введите ваш никнем.</div>
                         </div>
                       </div>
                       
@@ -77,14 +77,14 @@
                       <div class="col-12 mt-2">
                         <label for="yourPassword" class="form-label">Пароль</label>
                         <input type="password" name="password" class="form-control" id="yourPassword" required>
-                        <div class="invalid-feedback">Please enter your password!</div>
+                        <div class="invalid-feedback">Пожалуйста, введите ваш пароль!</div>
                       </div>
                       
                       <div class="col-12 mt-2">
                         <button class="btn btn-primary w-100" type="submit">Вход</button>
                       </div>
                       <div class="col-12">
-                        <p class="small mb-0">У вас нет аккаунта? <a href="pages-register.html">Создать аккаунт</a></p>
+                        <p class="small mb-0">У вас нет аккаунта? <a href="pages-register.php">Создать аккаунт</a></p>
                       </div>
                     </form>
                   </form>
