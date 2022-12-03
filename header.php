@@ -38,7 +38,7 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.php" class="logo d-flex align-items-center">
+      <a href="catalog.php" class="logo d-flex align-items-center">
       <img src="assets/img/logo.png" class="logo-game" alt="">
         <span class="d-none d-lg-block mx-2"> Мир БУ настолок</span>
       </a>
