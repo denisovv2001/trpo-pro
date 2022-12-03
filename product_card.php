@@ -6,22 +6,7 @@
 <body>
 
   <main id="main" class="main">
-    <?php
-
-    $result = $mysql->query('SELECT * FROM `game ad`');
-    while ($row = $result->fetch_assoc()) // получаем все строки в цикле по одной
-      {
-        $users_id = $row['users_id']
-
-        if(getmyuid() == $users_id)
-        $name_game = $row['game_name']; //название игры
-        $city = $row['sity']; //город
-        $barter = $row['present']; //способ обмена настолкой
-        if($barter == 1)
-          $barter = "бесплатно";
-        else 
-          $barter = "обмен";
-    echo '<body>
+     <body>
 
       <div class="container ">
         <div class="row">
@@ -93,7 +78,7 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-    </body>';
-    ?>
+    </body>
+    
 </body>
 </html>
