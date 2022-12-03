@@ -62,7 +62,7 @@
   
 
   <li class="nav-item">
-    <a class="nav-link collapsed" href="index.php">
+    <a class="nav-link collapsed" href="pages-login.php">
       <i class="bi bi-box-arrow-in-right"></i>
       <span>Выйти  из аккаунта</span>
     </a>
