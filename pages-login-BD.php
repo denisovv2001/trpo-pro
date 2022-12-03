@@ -1,7 +1,7 @@
 <?php
 session_start();
-
 include 'forms/conect.php';
+
   $username = filter_var(trim($_POST['username']),
   FILTER_SANITIZE_STRING);
   $password = filter_var(trim($_POST['password']),
@@ -17,9 +17,7 @@ include 'forms/conect.php';
   $_SESSION['user'] = [
     "name" => $user['login'],
     "city" => $user['sity'],
-    "email" => $user['@mail']
-    
-];
+    "email" => $user['@mail'] ];
 
   
   if ($user['nickname'] == '' ){
