@@ -23,7 +23,7 @@ include 'forms/conect.php';
 
   
   if ($user['nickname'] == '' ){
-    header('Location: /trpo-pro/login-error.php');
+    header('Location: login-error.php');
     exit();
   }
  
