@@ -57,7 +57,8 @@
 
               <div class="card" style="width: 18rem;">  
                 <div class="card-body">
-                  <h5 class="card-title">Имя Фамилия</h5>
+                  <h5 class="card-title pb-1">Имя Фамилия</h5>
+                  <h5 class="card-title pt-0">ID игры: <strong> <?php echo $_GET['id_game'] ?></strong></h5>
                   <h6 class="card-subtitle mb-2 text-muted">Москва</h6>
                   <p class="card-text">Номер телефона</p>
                   <p class="card-text">Адрес почты</p>
