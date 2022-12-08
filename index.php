@@ -1,6 +1,6 @@
 
 <?php 
-  include 'header.php';
+  include 'block-header.php';
   include 'block-side-menu.php';
 ?>
 
