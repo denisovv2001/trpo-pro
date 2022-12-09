@@ -36,10 +36,17 @@
                 <h2>' . $game_name . '</h2>
               </div>
   
-              <div class="col-1 mb-3">
-                <a class="btn btn-primary" href="#" role="button"><i class="bi bi-bookmark"></i></a>
-              </div>
-            </div>
+              <div class="col-1">
+              <form action="new_chosen-BD.php" method="get">
+                <input type="hidden" name="id_game" value= '. $id_game .' />
+                <input class="p-1 button btn btn-warning" type="submit" value="В избранное">
+              </form>
+              </div>';
+              //<div class="col-1 mb-3">
+              //  <a class="btn btn-warning" href="#" role="button"><i class="bi bi-bookmark"></i></a>
+              //</div>
+             
+            echo '</div>
           
             <div class="row">
               <div class="col-8">  
@@ -80,7 +87,7 @@
                   echo '<h2 class="fs-2 text-center "><strong>БЕСПЛАТНО<i class="bi-gift ms-2"></i></strong></h2>';
                 }
                 else {
-                  echo '<h2 class="fs-2 text-center "><strong>ОБМЕН<i class="bi-gift ms-2"></i></strong></h2>';
+                  echo '<h2 class="fs-2 text-center "><strong>ОБМЕН<i class="bi-arrow-left-right ms-2"></i></strong></h2>';
                 }
 
                 echo '<div class="card" style="width: 18rem;">  
