@@ -39,13 +39,13 @@
                                 <label for="NameTheGame" class="form-label"><strong>Город</strong></label>
                                 <select class="form-select" name="sity" id="city">
                                   <option>Город...</option>
-                                  <option value = "Moscow">Moscow</option>
-                                  <option value = "Saint-Petersburg">Saint-Petersburg</option>
-                                  <option value = "Novosibirsk">Novosibirsk</option>
-                                  <option value = "Ekaterinburg">Ekaterinburg</option>
-                                  <option value = "Kazan">Kazan</option>
-                                  <option value = "6">Chelyabinsk</option>
-                                  <option value = "7">Krasnodar</option>
+                                  <option value = "Москва">Москва</option>
+                                  <option value = "Санкт-Петербург">Санкт-Петербург</option>
+                                  <option value = "Новосибирск">Новосибирск</option>
+                                  <option value = "Екатеринбург">Екатеринбург</option>
+                                  <option value = "Казань">Казань</option>
+                                  <option value = "Челябинск">Челябинск</option>
+                                  <option value = "Краснодар">Краснодар</option>
                                 </select>
                                 <div class="invalid-feedback">
                                   Пожалуйста, выберите действующий город.
