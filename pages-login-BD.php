@@ -15,6 +15,7 @@ include 'forms/conect.php';
 
   
   $_SESSION['user'] = [
+    "id" => $user['users_id'],
     "name" => $user['login'],
     "city" => $user['sity'],
     "email" => $user['@mail'] ];

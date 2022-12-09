@@ -53,7 +53,7 @@
   </li><!-- End Profile Page Nav -->
 
   <li class="nav-item">
-    <a class="nav-link collapsed" href="pages-contact.php">
+    <a class="nav-link collapsed" >
       <i class="bi bi-envelope"></i>
       <span>Техническая поддержка</span>
     </a>
