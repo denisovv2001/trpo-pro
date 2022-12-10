@@ -24,6 +24,7 @@ include 'forms/conect.php'; //подключение шапки
                 echo '<div class="row row-cols-3">';
                 while ($row = mysqli_fetch_assoc($query)) // получаем все строки в цикле по одной
                 {
+                    $id_game = $row['id_game'];
                     $name_game = $row['game_name']; //название игры
                     $city = $row['sity']; //город
                     $barter = $row['present']; //способ обмена настолкой
@@ -40,7 +41,10 @@ include 'forms/conect.php'; //подключение шапки
                         <h5 class="card-title fw-weight-bolder text-capitalize">' . $name_game . '</h5>
                         <p class="card-text text-capitalize">' . $city . '</p>
                         <p class="card-text text-uppercase">' . $barter . '</p>
-                        <a href="product_card.php" class="btn btn-primary">Добавить избранное</a>
+                        <form action="product_card.php" method="get">
+                            <input type="hidden" name="id_game" value= '. $id_game .' />
+                            <input class="button btn btn-primary" type="submit" value="Карточка товара">
+                        </form>
                         </div>
                     </div> 
                     </div>';
