@@ -10,31 +10,33 @@
 		// комментарий пользователя
 		$inputtext = filter_var(trim($_POST['text']), FILTER_SANITIZE_STRING);
 
-		try
-		{
-			echo "Спасибо за Ваше обращение! ";
-			echo "попытка подключить БД... ";
-			// подключаемся к серверу ('host=адрес_сервера', 'имя_пользователя', 'пароль' 'dbname=имя_базы_данных')
-			$mysql = new mysqli('ssh-182064.srv.hoster.ru','srv182064_pstgu','pstgu2022','srv182064_pstgu_new');
+		include 'forms/conect.php'; // подключаемся к БД
+		include 'header.php'; // подключаем шапку
+		include 'side-menu.php'; // подключаем боковое меню
 
-	  		//$mysql = new mysqli('localhost','root','root','pstgu'); //< или подключаемся к локальному серверу, если работаем на своей машине
-	  		echo "Datebase connection established";
-
-	  		// запись новой строчки данных в таблицу technical support в ячейки @mail и comment
-	  		/*
-	  			'переменные_данного_документа' 
-				`переменные_названия_столбцов_таблицы`
-	  		*/
-			$mysql->query("INSERT INTO `technical support` (`@mail`, `comment`) VALUES('$mail', '$inputtext') ") ;
-
-
-			// закрытие БД
-			$mysql->close();
+  		// запись данных в таблицу technical support в ячейки @mail и comment
+		$record = $mysql->query("INSERT INTO `technical support` (`@mail`, `comment`) VALUES('$mail', '$inputtext') ");
+		
+		if(!$record){ // ошибка в запросе
+			echo '<div class="card mt-2 text-center">
+        	<div class="card-body">
+        	<h5 class="card-title">Внимание</h5>
+        	<p class="card-text">В доступе отказано :((</p>
+        	<a href="pages-contact.php" class="btn btn-warning    ">Вернуться в техническую поддержку</a>
+        	</div>
+        	</div>';
 		}
-		// исключение при неудачном подключении к БД
-		catch (mysqlException $e)
-		{
-			echo "Connction failed: " . $e->getMessage();
+		else{ // всё прошло удачно, в БД записались данные
+			echo '<div class="card mt-2 text-center">
+	        <div class="card-body">
+	        <h5 class="card-title">Внимание</h5>
+	        <p class="card-text">Благодарим за обращение! Оно успешно отправлено.</p>
+	        <a href="pages-contact.php" class="btn btn-warning    ">Вернуться в техническую поддержку</a>
+	        </div>
+	        </div>';
 		}
+
+		// закрытие БД
+		$mysql->close();
 	}	
 ?>
