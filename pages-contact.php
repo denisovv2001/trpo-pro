@@ -7,7 +7,7 @@
 <body>
 
 <main id="main" class="main">
-
+<!--
   <div class="container">
         <div class="row g-5">
               <div class="col-md-12 col-lg-12">
@@ -16,7 +16,7 @@
 
                     <h2> Техническая поддержка </h2>
 
-                    <!-- Отмечаем на выбор, тему запроса -->
+                    
                     <div class="col-md-6 col-lg-6">
                         <div class="row g-3">
                           <div class="col-sm-10">
@@ -40,11 +40,11 @@
               </div>
         </div>
   </div>
-
+  -->
   <!-- переход из pages-contact.php в pages-contact-BD.php с помощью метода post -->
   <form action="pages-contact-BD.php" method="post">
     <div class="container ">
-      
+      <h2> Техническая поддержка </h2>
       <br>
 
       <!-- поле ввода электронной почты -->
