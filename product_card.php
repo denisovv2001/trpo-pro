@@ -26,6 +26,9 @@
           $city = $game['sity']; 
           $barter = $game['present']; 
           $comment = $game['comment'];
+          $foto1 = $game['foto1'];
+          $foto2 = $game['foto2'];
+          $foto3 = $game['foto3'];
           
           $nickname = $user['nickname'];
           $mail = $user['@mail'];
@@ -60,13 +63,13 @@
             
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="assets/img/game_of_trons.jpg" class="d-block w-100" alt="...">
+                      <img src="/trpo-pro/img/'.$game["foto1"].' " >
                     </div> 
                     <div class="carousel-item">
-                      <img src="assets/img/game_of_trons2.jpg" class="d-block w-100" alt="...">
+                      <img src="/trpo-pro/img/'.$game["foto2"].' " >
                     </div>
                     <div class="carousel-item">
-                      <img src="assets/img/game_of_trons3.png" class="d-block w-100" alt="...">
+                      <img src="/trpo-pro/img/'.$game["foto3"].' " >
                     </div>
                   </div>
                   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
