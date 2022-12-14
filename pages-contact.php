@@ -44,9 +44,10 @@
   <!-- переход из pages-contact.php в pages-contact-BD.php с помощью метода post -->
   <form action="pages-contact-BD.php" method="post">
     <div class="container ">
-      <h2> Техническая поддержка </h2>
-      <br>
-
+      <div class="row mt-2 mb-1">
+        <h1> Техническая поддержкае </h1>
+      </div>
+      
       <!-- поле ввода электронной почты -->
       <div class="col-sm-8">
         <label for="exampleFormControlInput1" class="form-label">Укажите Вашу электронную почту</label>

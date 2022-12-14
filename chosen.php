@@ -8,8 +8,10 @@
 <body>
 
 <main id="main" class="main">
-<h2>Избранное</h2> 
 <div class="container ">
+<div class="row my-2">
+<h1> Избранное </h1>
+</div>
   <div class="row row-cols-3 pt-2">
       <?php
       $id = $_SESSION['user']['id'];
@@ -35,12 +37,16 @@
           else 
             $barter = "обмен";
 
+          if($row['foto1']== NULL)
+            $foto1 = "null_foto.png";
+          else
+            $foto1 =$row['foto1'];
       
             echo '  <div class="col mt-3 col-12-sm text-start" >
                       <div div class="card card_game shadow-lg " style="width: 18rem; border-radius: 20px;">
-                        <a href="#" class="btn"> <img src="assets/img/game_of_trons.jpg" class="card-img-top" alt="..."></a>
+                      <a href="#" class="btn text-decoration-none" > <img src="/trpo-pro/img/'.$foto1.'" class="card-img" alt="..."></a>
                         <div class="card-body text-start"> 
-                          <h5 class="card-title fw-weight-bolder text-capitalize">' . $name_game . '</h5>
+                        <h5 class="card-title fw-weight-bolder text-capitalize text-truncate" style="max-width: 200px;">' . $name_game . '</h5>
                           <p class="card-text text-capitalize">' . $city . '</p>
                           <p class="card-text text-uppercase">' . $barter . '</p>
                           
@@ -51,7 +57,7 @@
                           
                           <form action="delete_chosen-BD.php" method="get">
                             <input type="hidden" name="id_game" value= '. $id_game .' />
-                            <input class="p-1 button btn btn-danger" type="submit" value="Удалить">
+                            <input class="p-1 mt-2 button btn btn-danger" type="submit" value="Удалить">
                           </form>
                         </div>
                       </div> 
