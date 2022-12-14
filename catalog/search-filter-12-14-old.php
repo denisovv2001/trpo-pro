@@ -52,7 +52,7 @@ if($_POST['age_game'] == "12-14") // поиск фильтра возраст о
 
                 echo '<div class="col mt-3 col-12-sm text-start" >
                 <div class="card card_game shadow-lg " style="width: 18rem; border-radius: 20px;">
-                <a href="#" class="btn text-decoration-none" > <img src="/trpo-pro/img/'.$foto1.'" class="card-img" alt="..."></a>
+                <a href="#" class="btn text-decoration-none" > <img src="img/'.$foto1.'" class="card-img" alt="..."></a>
                 <div class="card-body text-start"> 
                 <h5 class="card-title fw-weight-bolder text-capitalize">' . $name_game . '</h5>
                 <p class="card-text text-capitalize">' . $city . '</p>
@@ -88,21 +88,6 @@ if($_POST['age_game'] == "12-14") // поиск фильтра возраст о
         $max = $_POST['max_player'];
         $city = $_POST['city_choice'];
 
-        // echo '
-        // <div class="col-12 card-body mt-3  px-0">
-        // <h4 class = "text-primary">Фильтры:</h4>
-        // <button type="button" class="btn btn-primary mb-2 me-2">
-        // Возраст: <span class="badge bg-white text-primary">от'. $min_age.'-'. $max_age .'  </span>
-        // </button>
-        // <button type="button" class="btn btn-primary mb-2 me-2">
-        // Кол-во игроков  <span class="badge bg-white text-primary"> мин: '. $min.' - макс: '. $max .' </span>
-        // </button>
-
-        // <button type="button" class="btn btn-primary mb-2">
-        // Город  <span class="badge bg-white text-primary">'.$city.'</span>
-        // </button>
-        // </div>';
-
         $result = $mysql->query("SELECT * FROM `game ad`  WHERE `sity` = '$city' AND `age` >= '$min_age' AND `age` <= '$max_age' AND `quality_max` <= '$max'");
         
         if($result->num_rows > 0){
@@ -110,7 +95,7 @@ if($_POST['age_game'] == "12-14") // поиск фильтра возраст о
         <div class="col-12 card-body mt-3  px-0">
         <h4 class = "text-primary">Фильтры:</h4>
         <button type="button" class="btn btn-primary mb-2 me-2">
-        Возраст: <span class="badge bg-white text-primary">от'. $min_age.'-'. $max_age .'  </span>
+        Возраст: <span class="badge bg-white text-primary">от '. $min_age.'- '. $max_age .'  </span>
         </button>
         <button type="button" class="btn btn-primary mb-2 me-2">
         Кол-во игроков  <span class="badge bg-white text-primary"> мин: '. $min.' - макс: '. $max .' </span>
@@ -139,7 +124,7 @@ if($_POST['age_game'] == "12-14") // поиск фильтра возраст о
 
                 echo '<div class="col mt-3 col-12-sm text-start" >
                 <div class="card card_game shadow-lg " style="width: 18rem; border-radius: 20px;">
-                <a href="#" class="btn text-decoration-none" > <img src="/trpo-pro/img/'.$foto1.'" class="card-img" alt="..."></a>
+                <a href="#" class="btn text-decoration-none" > <img src="img/'.$foto1.'" class="card-img" alt="..."></a>
                 <div class="card-body text-start"> 
                 <h5 class="card-title fw-weight-bolder text-capitalize">' . $name_game . '</h5>
                 <p class="card-text text-capitalize">' . $city . '</p>
@@ -211,7 +196,7 @@ if($_POST['age_game'] == "12-14") // поиск фильтра возраст о
 
                 echo '<div class="col mt-3 col-12-sm text-start" >
                 <div class="card card_game shadow-lg " style="width: 18rem; border-radius: 20px;">
-                <a href="#" class="btn text-decoration-none" > <img src="/trpo-pro/img/'.$foto1.'" class="card-img" alt="..."></a>
+                <a href="#" class="btn text-decoration-none" > <img src="img/'.$foto1.'" class="card-img" alt="..."></a>
                 <div class="card-body text-start"> 
                 <h5 class="card-title fw-weight-bolder text-capitalize text-truncate" style="max-width: 200px;">' . $name_game . '</h5>
                 <p class="card-text text-capitalize">' . $city . '</p>
@@ -277,7 +262,7 @@ if($_POST['age_game'] == "12-14") // поиск фильтра возраст о
                     $foto1 =$row['foto1'];
                 echo '<div class="col mt-3 col-12-sm text-start" >
                 <div class="card card_game shadow-lg " style="width: 18rem; border-radius: 20px;">
-                <a href="#" class="btn text-decoration-none" > <img src="/trpo-pro/img/'.$foto1.'" class="card-img" alt="..."></a>
+                <a href="#" class="btn text-decoration-none" > <img src="img/'.$foto1.'" class="card-img" alt="..."></a>
                 <div class="card-body text-start"> 
                 <h5 class="card-title fw-weight-bolder text-capitalize text-truncate" style="max-width: 200px;">' . $name_game . '</h5>
                 <p class="card-text text-capitalize">' . $city . '</p>

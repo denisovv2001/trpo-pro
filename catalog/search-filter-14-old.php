@@ -53,7 +53,7 @@ if($_POST['age_game'] == "14") // поиск фильтра возраст от 
 
                 echo '<div class="col mt-3 col-12-sm text-start" >
                 <div class="card card_game shadow-lg " style="width: 18rem; border-radius: 20px;">
-                <a href="#" class="btn text-decoration-none" > <img src="/trpo-pro/img/'.$foto1.'" class="card-img" alt="..."></a>
+                <a href="#" class="btn text-decoration-none" > <img src="img/'.$foto1.'" class="card-img" alt="..."></a>
                 <div class="card-body text-start"> 
                 <h5 class="card-title fw-weight-bolder text-capitalize text-truncate" style="max-width: 200px;">' . $name_game . '</h5>
                 <p class="card-text text-capitalize">' . $city . '</p>
@@ -126,7 +126,7 @@ if($_POST['age_game'] == "14") // поиск фильтра возраст от 
 
                 echo '<div class="col mt-3 col-12-sm text-start" >
                 <div class="card card_game shadow-lg " style="width: 18rem; border-radius: 20px;">
-                <a href="#" class="btn text-decoration-none" > <img src="/trpo-pro/img/'.$foto1.'" class="card-img" alt="..."></a>
+                <a href="#" class="btn text-decoration-none" > <img src="img/'.$foto1.'" class="card-img" alt="..."></a>
                 <div class="card-body text-start"> 
                 <h5 class="card-title fw-weight-bolder text-capitalize text-truncate" style="max-width: 200px;">' . $name_game . '</h5>
                 <p class="card-text text-capitalize">' . $city . '</p>
@@ -198,7 +198,7 @@ if($_POST['age_game'] == "14") // поиск фильтра возраст от 
 
                 echo '<div class="col mt-3 col-12-sm text-start" >
                 <div class="card card_game shadow-lg " style="width: 18rem; border-radius: 20px;">
-                <a href="#" class="btn text-decoration-none" > <img src="/trpo-pro/img/'.$foto1.'" class="card-img" alt="..."></a>
+                <a href="#" class="btn text-decoration-none" > <img src="img/'.$foto1.'" class="card-img" alt="..."></a>
                 <div class="card-body text-start"> 
                 <h5 class="card-title fw-weight-bolder text-capitalize">' . $name_game . '</h5>
                 <p class="card-text text-capitalize">' . $city . '</p>
@@ -263,7 +263,7 @@ if($_POST['age_game'] == "14") // поиск фильтра возраст от 
     
                 echo '<div class="col mt-3 col-12-sm text-start" >
                 <div class="card card_game shadow-lg " style="width: 18rem; border-radius: 20px;">
-                <a href="#" class="btn text-decoration-none" > <img src="/trpo-pro/img/'.$foto1.'" class="card-img" alt="..."></a>
+                <a href="#" class="btn text-decoration-none" > <img src="img/'.$foto1.'" class="card-img" alt="..."></a>
                 <div class="card-body text-start"> 
                 <h5 class="card-title fw-weight-bolder text-capitalize text-truncate" style="max-width: 200px;">' . $name_game . '</h5>
                 <p class="card-text text-capitalize">' . $city . '</p>
