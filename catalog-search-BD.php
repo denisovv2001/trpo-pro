@@ -33,10 +33,14 @@ include 'forms/conect.php'; //подключение шапки
                     $barter = "бесплатно";
                     else 
                     $barter = "обмен";
+                    if($row['foto1']== NULL)
+                        $foto1 = "null_foto.png";
+                    else
+                        $foto1 =$row['foto1'];
 
                     echo '<div class="col mt-3 col-12-sm text-start" style="border-radius: 20px;">
                         <div class="card card_game shadow-lg " style="width: 18rem;">
-                        <a href="product_card.php" class="btn"> <img src="assets/img/game_of_trons.jpg" class="card-img-top" alt="..."></a>
+                        <a href="#" class="btn text-decoration-none" > <img src="/trpo-pro/img/'.$foto1.'" class="card-img" alt="..."></a>
                         <div class="card-body text-start"> 
                         <h5 class="card-title fw-weight-bolder text-capitalize">' . $name_game . '</h5>
                         <p class="card-text text-capitalize">' . $city . '</p>

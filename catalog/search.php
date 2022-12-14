@@ -44,7 +44,6 @@
                 <option value = "Казань">Казань</option>
                 <option value = "Челябинск">Челябинск</option>
                 <option value = "Краснодар">Краснодар</option>
-                <option value = "all_city">Все города</option>
             </select>
 
             <div class="invalid-feedback mb-3">

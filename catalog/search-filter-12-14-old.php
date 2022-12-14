@@ -13,24 +13,6 @@ if($_POST['age_game'] == "12-14") // поиск фильтра возраст о
         $max_player = $_POST['max_player'];
 
         $city = $_POST['city_choice'];
-
-        // echo '
-        // <div class="col-12 card-body mt-3  px-0">
-        // <h4 class = "text-primary">Фильтры:</h4>
-        // <button type="button" class="btn btn-primary mb-2 me-2">
-        // Возраст: <span class="badge bg-white text-primary">от'. $min_age.'-'. $max_age .'  </span>
-        // </button>
-        // <button type="button" class="btn btn-primary mb-2 me-2">
-        // Кол-во игроков: <span class="badge bg-white text-primary"> мин: '. $min_player.' - макс: '. $max_player .' </span>
-        // </button>
-        // <button type="button" class="btn btn-primary mb-2 me-2">
-        // Время игры <span class="badge bg-white text-primary"> мин: '. $min_time.' - макс: '. $max_time .' </span>
-        // </button>
-        // <button type="button" class="btn btn-primary mb-2">
-        // Город  <span class="badge bg-white text-primary">'.$city.'</span>
-        // </button>
-        // </div>';
-
         $result = $mysql->query("SELECT * FROM `game ad`  WHERE `sity` = '$city' AND `age` >= '$min_age' AND `age` <= '$max_age' AND `quality_max` <= '$max_player' AND `max_time` <= '$max_time'");
         
         if($result->num_rows > 0){
@@ -61,11 +43,16 @@ if($_POST['age_game'] == "12-14") // поиск фильтра возраст о
                 if($barter == 1)
                 $barter = "бесплатно";
                 else 
-                $barter = "обмен";
+                $barter = "обмен"
+                ;
+                if($row['foto1']== NULL)
+                    $foto1 = "null_foto.png";
+                else
+                    $foto1 =$row['foto1'];
 
                 echo '<div class="col mt-3 col-12-sm text-start" >
                 <div class="card card_game shadow-lg " style="width: 18rem; border-radius: 20px;">
-                <a href="product_card.php" class="btn"> <img src="assets/img/game_of_trons.jpg" class="card-img-top" alt="..."></a>
+                <a href="#" class="btn text-decoration-none" > <img src="/trpo-pro/img/'.$foto1.'" class="card-img" alt="..."></a>
                 <div class="card-body text-start"> 
                 <h5 class="card-title fw-weight-bolder text-capitalize">' . $name_game . '</h5>
                 <p class="card-text text-capitalize">' . $city . '</p>
@@ -145,9 +132,14 @@ if($_POST['age_game'] == "12-14") // поиск фильтра возраст о
                 else 
                 $barter = "обмен";
 
+                if($row['foto1']== NULL)
+                    $foto1 = "null_foto.png";
+                else
+                    $foto1 =$row['foto1'];
+
                 echo '<div class="col mt-3 col-12-sm text-start" >
                 <div class="card card_game shadow-lg " style="width: 18rem; border-radius: 20px;">
-                <a href="product_card.php" class="btn"> <img src="assets/img/game_of_trons.jpg" class="card-img-top" alt="..."></a>
+                <a href="#" class="btn text-decoration-none" > <img src="/trpo-pro/img/'.$foto1.'" class="card-img" alt="..."></a>
                 <div class="card-body text-start"> 
                 <h5 class="card-title fw-weight-bolder text-capitalize">' . $name_game . '</h5>
                 <p class="card-text text-capitalize">' . $city . '</p>
@@ -181,20 +173,6 @@ if($_POST['age_game'] == "12-14") // поиск фильтра возраст о
         $min = $_POST['min_time'];
         $max = $_POST['max_time'];
         $city = $_POST['city_choice'];
-        // echo '
-        // <div class="col-12 card-body mt-3  px-0">
-        // <h4 class = "text-primary">Фильтры:</h4>
-        // <button type="button" class="btn btn-primary mb-2 me-2">
-        // Возраст: <span class="badge bg-white text-primary">от'. $min_age.'-'. $max_age .'  </span>
-        // </button>
-        // <button type="button" class="btn btn-primary mb-2 me-2">
-        // Время игры <span class="badge bg-white text-primary"> мин: '. $min.' - макс: '. $max .' </span>
-        // </button>
-
-        // <button type="button" class="btn btn-primary mb-2">
-        // Город  <span class="badge bg-white text-primary">'.$city.'</span>
-        // </button>
-        // </div>';
 
         $result = $mysql->query("SELECT * FROM `game ad`  WHERE `sity` = '$city' AND `age` >= '$min_age' AND `age` <= '$max_age' AND `max_time` <= '$max'");
         
@@ -226,9 +204,14 @@ if($_POST['age_game'] == "12-14") // поиск фильтра возраст о
                 else 
                 $barter = "обмен";
 
+                if($row['foto1']== NULL)
+                    $foto1 = "null_foto.png";
+                else
+                    $foto1 =$row['foto1'];
+
                 echo '<div class="col mt-3 col-12-sm text-start" >
                 <div class="card card_game shadow-lg " style="width: 18rem; border-radius: 20px;">
-                <a href="product_card.php" class="btn"> <img src="assets/img/game_of_trons.jpg" class="card-img-top" alt="..."></a>
+                <a href="#" class="btn text-decoration-none" > <img src="/trpo-pro/img/'.$foto1.'" class="card-img" alt="..."></a>
                 <div class="card-body text-start"> 
                 <h5 class="card-title fw-weight-bolder text-capitalize text-truncate" style="max-width: 200px;">' . $name_game . '</h5>
                 <p class="card-text text-capitalize">' . $city . '</p>
@@ -288,10 +271,13 @@ if($_POST['age_game'] == "12-14") // поиск фильтра возраст о
                     $barter = "бесплатно";
                 else 
                     $barter = "обмен";
-
+                if($row['foto1']== NULL)
+                    $foto1 = "null_foto.png";
+                else
+                    $foto1 =$row['foto1'];
                 echo '<div class="col mt-3 col-12-sm text-start" >
                 <div class="card card_game shadow-lg " style="width: 18rem; border-radius: 20px;">
-                <a href="product_card.php" class="btn"> <img src="assets/img/game_of_trons.jpg" class="card-img-top" alt="..."></a>
+                <a href="#" class="btn text-decoration-none" > <img src="/trpo-pro/img/'.$foto1.'" class="card-img" alt="..."></a>
                 <div class="card-body text-start"> 
                 <h5 class="card-title fw-weight-bolder text-capitalize text-truncate" style="max-width: 200px;">' . $name_game . '</h5>
                 <p class="card-text text-capitalize">' . $city . '</p>
