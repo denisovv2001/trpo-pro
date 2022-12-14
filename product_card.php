@@ -63,13 +63,13 @@
             
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="/trpo-pro/img/'.$game["foto1"].' " >
+                      <img src="img/'.$game["foto1"].' " >
                     </div> 
                     <div class="carousel-item">
-                      <img src="/trpo-pro/img/'.$game["foto2"].' " >
+                      <img src="img/'.$game["foto2"].' " >
                     </div>
                     <div class="carousel-item">
-                      <img src="/trpo-pro/img/'.$game["foto3"].' " >
+                      <img src="img/'.$game["foto3"].' " >
                     </div>
                   </div>
                   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
