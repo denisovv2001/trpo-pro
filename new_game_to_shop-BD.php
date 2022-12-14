@@ -50,20 +50,22 @@
 
                     $mysql->query("INSERT INTO `game ad` (`users_id`, `game_name`, `sity`, `age`, `quality_min`, `quality_max`, `min_time`, `max_time`, `comment`, `present`, `foto1`, `foto2`, `foto3`) 
                     VALUES('$users_id', '$game_name', '$sity', '$age', '$quality_min', '$quality_max', '$min_time', '$max_time', '$comment', '$present', '$foto1', '$foto2', '$foto3')");
-                    header('Location: my_game.php');
+                    
                     $mysql->close();
+                    
+                    header('Location: catalog.php');
 
-                    echo '<div class="container ">
-                    <div class="row">
-                        <div class="col-12 ">
-                            <div class="card " style="width: 37rem;  border-radius: 15px; height: 100px;">
-                            <div class="card-body p-4 ">
+                    // echo '<div class="container ">
+                    // <div class="row">
+                    //     <div class="col-12 ">
+                    //         <div class="card " style="width: 37rem;  border-radius: 15px; height: 100px;">
+                    //         <div class="card-body p-4 ">
                             
-                            <h1> Игра успешно добавлена! <i class="bi-check-circle text-success" style="width: 300px"></i></h1>
-                            </div>
-                            </div>
-                        </div>
-                    </div>';
+                    //         <h1> Игра успешно добавлена! <i class="bi-check-circle text-success" style="width: 300px"></i></h1>
+                    //         </div>
+                    //         </div>
+                    //     </div>
+                    // </div>';
 
             ?>
         </div>
