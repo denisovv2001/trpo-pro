@@ -45,7 +45,7 @@
   <form action="pages-contact-BD.php" method="post">
     <div class="container ">
       <div class="row mt-2 mb-1">
-        <h1> Техническая поддержкае </h1>
+        <h1> Техническая поддержка </h1>
       </div>
       
       <!-- поле ввода электронной почты -->
