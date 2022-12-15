@@ -37,10 +37,10 @@
           else 
             $barter = "обмен";
 
-          if($row['foto1']== NULL)
+          if($row2['foto1']== NULL)
             $foto1 = "null_foto.png";
           else
-            $foto1 =$row['foto1'];
+            $foto1 =$row2['foto1'];
       
             echo '  <div class="col mt-3 col-12-sm text-start" >
                       <div div class="card card_game shadow-lg " style="width: 18rem; border-radius: 20px;">
