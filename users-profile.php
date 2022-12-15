@@ -22,16 +22,17 @@
                 <img src="assets/img/profile-dog.png" alt="Profile" class="rounded-circle">
                 <h2 class="my-3 "><?php echo $_SESSION['user']['name']; ?></h2>
                 
-                <form action="users-profile.php" method="POST">
+                <form action="pages-login.php" method="POST">
                       <input name="myActionName" class=" btn btn-dark" type="submit" value="Выйти из сайта " />
+                       <?php
+                        if (isset($_POST['myActionName']))
+                        {
+                          unset($_SESSION['user']);
+                          header('Location: pages-login.php');
+                        }
+                      ?> 
                 </form>
-                <?php
-                    if (isset($_POST['myActionName']))
-                    {
-                      unset($_SESSION['user']);
-                      header('Location: pages-login.php');
-                    }
-                ?> 
+                
               </div>
             </div>
 
